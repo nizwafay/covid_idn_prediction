@@ -16,7 +16,7 @@ def get_total_cases(days_after_22_mar):
     max_infected_people = 53728.796289306054
     return max_infected_people/(1+np.exp(-infection_speed_rate*(days_after_22_mar-day_peak)))
 
-@app.route('/covid-idn', methods = ['POST'])
+@app.route('/total-cases', methods = ['POST'])
 def covid_idn():
     data = request.json
     input_start_date = data['start_date']
